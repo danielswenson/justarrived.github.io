@@ -6,9 +6,9 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Just Arrived - Register company</title>
-	<meta name="description" content="Register your company with Just Arrived">
-	<link rel="canonical" href="http://justarrived.se/register-company.html">
+	<title>Just Arrived - Hourly pay calculator</title>
+	<meta name="description" content="Hourly pay calculator">
+	<link rel="canonical" href="http://justarrived.se/pay-calculator.html">
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
@@ -83,13 +83,13 @@
 				
 				
 
-        <a href="/register-company.html">
+        <a href="/pay-calculator.html">
           <span class="lang-en">English</span>
         </a>
-				<a href="/sv/register-company.html">
+				<a href="/sv/pay-calculator.html">
 					<span class="lang-sv">Svenska</span>
 				</a>
-				<a href="/ar/register-company.html">
+				<a href="/ar/pay-calculator.html">
 					<span class="lang-ar">العربية</span>
 				</a>
 
@@ -102,128 +102,54 @@
 </header>
 
 
-    <div class="company-form-page">
+    <div class="hourly-pay-calculator-page">
   <div id="content">
     <section class="
-section--introduction
-module
-module--padding
-module--black
-module--white-bg
-">
-  <div class="
-module-content
-module-content--centered
-module--black
-">
-    <h2 class="bordered bordered--primary module--txt-c">Registrera företag</h2>
-    <p>Fyll in jobbuppgifterna, så vi kan publicera det på våran plattform.</p>
+    section--introduction
+    module
+    module--padding
+    module--black
+    module--white-bg
+    ">
+      <div class="
+    module-content
+    module-content--centered
+    module--black
+    ">
+        <h2 class="bordered bordered--primary module--txt-c">Pay Calculator</h2>
 
-    <form action="https://formspree.io/anna.hornmark+company-forms@justarrived.se" method="POST" class="signup-form">
-      <h3>Företag</h3>
-      <div class="form-col">
-  <label for="company_name">Företagsnamn <span class="asterisk">*</span></label>
-  <input type="text" value="" name="company_name" class="required" id="company_name" required>
-</div>
+        <form action="/hourly-pays" method="GET" class="js-pay-calculator-form" onsubmit="payCalculatorFormSubmit(); return false;">
+          <div class="form-col form-col--full-width">
+            <label for="gross_salary">Gross Salary <span class="asterisk">*</span></label>
+            <input type="text" value="" name="gross_salary" class="required" id="gross_salary" required>
+          </div>
 
-<div class="form-col">
-  <label for="company_org_number">Organisationsnummer <span class="asterisk">*</span></label>
-  <input type="text" value="" name="company_org_number" class="required" id="company_org_number" required>
-</div>
+          <!-- Submit Button -->
+          <div class="clear">
+            <input type="submit" value="Spara" name="submit" class="button border-btn btn-large border-btn--pink">
+          </div>
 
-<div class="form-col form-col--full-width">
-  <label for="address">Adress <span class="asterisk">*</span></label>
-  <input type="text" value="" name="address" class="required" id="address" required>
-</div>
+          <div id="js-hourly-pay-result" style="display:none;">
+            <br><br><br>
 
-<div class="form-col form-col--full-width">
-  <label>Företagslogga</label>
-  <input type="text" value="" name="company_logo_link" class="required" id="company_logo_link">
-</div>
-
-
-      <h3>Kontakt</h3>
-      <div class="form-col">
-  <label for="name">Namn <span class="asterisk">*</span>
-  </label>
-  <input type="text" value="" maxlength="80" name="name" class="required" id="name" required>
-</div>
-
-<div class="form-col">
-  <label>Email adress <span class="asterisk">*</span></label>
-  <input type="email" value="" name="email" class="required email" id="email" required>
-</div>
-
-<div class="form-col size1of2">
-  <label for="phone">Telefon nummer</label>
-  <input type="number" maxlength="40" name="phone" class="" value="" id="phone">
-</div>
-
-<div class="form-col">
-  <label>Personnummer <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Behövs av fakturaskäl" name="ssn" class="required" id="ssn" required>
-</div>
-
-
-      <h3>Anställd</h3>
-      <div class="form-col form-col--full-width">
-  <label>Språk <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Exempel: Svenska eller engelska" name="languages" class="required" id="languages" required>
-</div>
-
-<div class="form-col form-col--full-width">
-  <label>Kompetenser <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Exempel: MS Office erfarenhet, Ekonomiskbakgrund eller Ingen" name="competencies" class="required" id="competencies">
-</div>
-
-
-      <h3>Jobb</h3>
-      <div class="form-col">
-  <label>Timmar <span class="asterisk">*</span></label>
-  <input type="number" value="" name="job_hours" class="required" id="job_hours" required>
-</div>
-
-<div class="form-col">
-  <label>Antal personer <span class="asterisk">*</span></label>
-  <input type="number" value="" name="job_no_of_people" class="required" id="job_no_of_people" required>
-</div>
-
-<div class="form-col">
-  <label>Startdatum <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="YYYY-MM-DD" name="job_start_date" class="required" id="job_start_date" required>
-</div>
-
-<div class="form-col">
-  <label>Slutdatum <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="YYYY-MM-DD" name="job_end_date" class="required" id="job_end_date" required>
-</div>
-
-<div class="form-col form-col--full-width">
-  <label>Lön <span class="asterisk">*</span></label>
-  <input type="number" min="140" max="250" placeholder="Välj mellan: 147/161/175 kr/h" value="" name="salary" class="required" id="salary" required>
-</div>
-
-<div class="form-col form-col--full-width">
-  <label>Beskrivning <span class="asterisk">*</span></label>
-  <textarea name="job_description" rows="8" cols="40" class="required" id="job_description" required></textarea>
-</div>
-
-
-      <!-- START: FormSpree fields -->
-<input type="hidden" name="_subject" value="New form submission!" />
-<input type="hidden" name="_next" value="http://justarrived.se/submit-thanks.html" />
-<!-- prevent bot signups -->
-<input type="text" name="_gotcha" style="display:none" />
-<!-- END: FormSpree fields -->
-
-<!-- Submit Button -->
-<div class="clear">
-  <input type="submit" value="Spara" name="submit" class="button border-btn btn-large border-btn--pink">
-</div>
-
-    </form>
-  </div>
-</section>
+            <table class="boring-table">
+              <tr>
+                <td>Gross</td>
+                <td>Net</td>
+                <td>Excluding VAT</td>
+                <td>Including VAT</td>
+              </tr>
+              <tr>
+                <td id='js-gross-salary-result'></td>
+                <td id='js-net-salary-result'></td>
+                <td id='js-ex-vat-result'></td>
+                <td id='js-inc-vat-result'></td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+    </section>
 
   </div>
 </div>

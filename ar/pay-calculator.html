@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="ar">
 
 <head>
 	<meta charset="utf-8">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Just Arrived - Register company</title>
-	<meta name="description" content="Register your company with Just Arrived">
-	<link rel="canonical" href="http://justarrived.se/register-company.html">
+	<title>Just Arrived - Hourly pay calculator</title>
+	<meta name="description" content="Hourly pay calculator">
+	<link rel="canonical" href="http://justarrived.se/pay-calculator.html">
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
@@ -67,7 +67,7 @@
 
 
 
-<body class="sv-locale ltr-locale-direction" itemscope="" itemtype="http://schema.org/WebPage">
+<body class="ar-locale rtl-locale-direction" itemscope="" itemtype="http://schema.org/WebPage">
 
   <div id="container">
     <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
@@ -83,147 +83,73 @@
 				
 				
 
-        <a href="/register-company.html">
+        <a href="/pay-calculator.html">
           <span class="lang-en">English</span>
         </a>
-				<a href="/sv/register-company.html">
+				<a href="/sv/pay-calculator.html">
 					<span class="lang-sv">Svenska</span>
 				</a>
-				<a href="/ar/register-company.html">
+				<a href="/ar/pay-calculator.html">
 					<span class="lang-ar">العربية</span>
 				</a>
 
 			</div>
-			<a href="#" class="primary-btn cd-popup-trigger-signin">Jag vill söka jobb</a>
-			<a href="#" class="border-btn cd-popup-trigger-promo">Logga in med promokod</a>
+			<a href="#" class="primary-btn cd-popup-trigger-signin">تسجيل الدخول</a>
+			<a href="#" class="border-btn cd-popup-trigger-promo">تسجيل الدخول مع الرمز الترويجي</a>
 		</div>
 
 	</div>
 </header>
 
 
-    <div class="company-form-page">
+    <div class="hourly-pay-calculator-page">
   <div id="content">
     <section class="
-section--introduction
-module
-module--padding
-module--black
-module--white-bg
-">
-  <div class="
-module-content
-module-content--centered
-module--black
-">
-    <h2 class="bordered bordered--primary module--txt-c">Registrera företag</h2>
-    <p>Fyll in jobbuppgifterna, så vi kan publicera det på våran plattform.</p>
+    section--introduction
+    module
+    module--padding
+    module--black
+    module--white-bg
+    ">
+      <div class="
+    module-content
+    module-content--centered
+    module--black
+    ">
+        <h2 class="bordered bordered--primary module--txt-c">Pay Calculator</h2>
 
-    <form action="https://formspree.io/anna.hornmark+company-forms@justarrived.se" method="POST" class="signup-form">
-      <h3>Företag</h3>
-      <div class="form-col">
-  <label for="company_name">Företagsnamn <span class="asterisk">*</span></label>
-  <input type="text" value="" name="company_name" class="required" id="company_name" required>
-</div>
+        <form action="/hourly-pays" method="GET" class="js-pay-calculator-form" onsubmit="payCalculatorFormSubmit(); return false;">
+          <div class="form-col form-col--full-width">
+            <label for="gross_salary">Gross Salary <span class="asterisk">*</span></label>
+            <input type="text" value="" name="gross_salary" class="required" id="gross_salary" required>
+          </div>
 
-<div class="form-col">
-  <label for="company_org_number">Organisationsnummer <span class="asterisk">*</span></label>
-  <input type="text" value="" name="company_org_number" class="required" id="company_org_number" required>
-</div>
+          <!-- Submit Button -->
+          <div class="clear">
+            <input type="submit" value="Submit" name="submit" class="button border-btn btn-large border-btn--pink">
+          </div>
 
-<div class="form-col form-col--full-width">
-  <label for="address">Adress <span class="asterisk">*</span></label>
-  <input type="text" value="" name="address" class="required" id="address" required>
-</div>
+          <div id="js-hourly-pay-result" style="display:none;">
+            <br><br><br>
 
-<div class="form-col form-col--full-width">
-  <label>Företagslogga</label>
-  <input type="text" value="" name="company_logo_link" class="required" id="company_logo_link">
-</div>
-
-
-      <h3>Kontakt</h3>
-      <div class="form-col">
-  <label for="name">Namn <span class="asterisk">*</span>
-  </label>
-  <input type="text" value="" maxlength="80" name="name" class="required" id="name" required>
-</div>
-
-<div class="form-col">
-  <label>Email adress <span class="asterisk">*</span></label>
-  <input type="email" value="" name="email" class="required email" id="email" required>
-</div>
-
-<div class="form-col size1of2">
-  <label for="phone">Telefon nummer</label>
-  <input type="number" maxlength="40" name="phone" class="" value="" id="phone">
-</div>
-
-<div class="form-col">
-  <label>Personnummer <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Behövs av fakturaskäl" name="ssn" class="required" id="ssn" required>
-</div>
-
-
-      <h3>Anställd</h3>
-      <div class="form-col form-col--full-width">
-  <label>Språk <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Exempel: Svenska eller engelska" name="languages" class="required" id="languages" required>
-</div>
-
-<div class="form-col form-col--full-width">
-  <label>Kompetenser <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Exempel: MS Office erfarenhet, Ekonomiskbakgrund eller Ingen" name="competencies" class="required" id="competencies">
-</div>
-
-
-      <h3>Jobb</h3>
-      <div class="form-col">
-  <label>Timmar <span class="asterisk">*</span></label>
-  <input type="number" value="" name="job_hours" class="required" id="job_hours" required>
-</div>
-
-<div class="form-col">
-  <label>Antal personer <span class="asterisk">*</span></label>
-  <input type="number" value="" name="job_no_of_people" class="required" id="job_no_of_people" required>
-</div>
-
-<div class="form-col">
-  <label>Startdatum <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="YYYY-MM-DD" name="job_start_date" class="required" id="job_start_date" required>
-</div>
-
-<div class="form-col">
-  <label>Slutdatum <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="YYYY-MM-DD" name="job_end_date" class="required" id="job_end_date" required>
-</div>
-
-<div class="form-col form-col--full-width">
-  <label>Lön <span class="asterisk">*</span></label>
-  <input type="number" min="140" max="250" placeholder="Välj mellan: 147/161/175 kr/h" value="" name="salary" class="required" id="salary" required>
-</div>
-
-<div class="form-col form-col--full-width">
-  <label>Beskrivning <span class="asterisk">*</span></label>
-  <textarea name="job_description" rows="8" cols="40" class="required" id="job_description" required></textarea>
-</div>
-
-
-      <!-- START: FormSpree fields -->
-<input type="hidden" name="_subject" value="New form submission!" />
-<input type="hidden" name="_next" value="http://justarrived.se/submit-thanks.html" />
-<!-- prevent bot signups -->
-<input type="text" name="_gotcha" style="display:none" />
-<!-- END: FormSpree fields -->
-
-<!-- Submit Button -->
-<div class="clear">
-  <input type="submit" value="Spara" name="submit" class="button border-btn btn-large border-btn--pink">
-</div>
-
-    </form>
-  </div>
-</section>
+            <table class="boring-table">
+              <tr>
+                <td>Gross</td>
+                <td>Net</td>
+                <td>Excluding VAT</td>
+                <td>Including VAT</td>
+              </tr>
+              <tr>
+                <td id='js-gross-salary-result'></td>
+                <td id='js-net-salary-result'></td>
+                <td id='js-ex-vat-result'></td>
+                <td id='js-inc-vat-result'></td>
+              </tr>
+            </table>
+          </div>
+        </form>
+      </div>
+    </section>
 
   </div>
 </div>
@@ -251,8 +177,8 @@ module--black
     module-content--centered
     module--black
     ">
-        <h2 class="bordered bordered--primary module--txt-c">Registrera dig för vår beta</h2>
-        <p>Vi testar just nu plattformen med en exklusiv grupp företag och nyanlända. Om du är intresserad av att använda plattformen efter vår officiella lansering, fyll gärna i formuläret så hör vi av oss!</p>
+        <h2 class="bordered bordered--primary module--txt-c">Indicate Interest</h2>
+        <p>نحن حاليا باختبار منصة مع مجموعة حصرية من شركات والوافدين الجدد التي تم توفيرها مع الرمز الترويجي للوصول إلى المنصة. إذا لم يكن لديك الرمز الترويجي وكنت مهتما في الاستفادة من منصة يرجى النقر على الاشتراك وتسجيل اهتمامك هناك. شكرا!</p>
         <div id="mc_embed_signup">
           <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="signup-form">
 
@@ -278,55 +204,55 @@ module--black
             <!--  ----------------------------------------------------------------------  -->
 
             <div class="signup-error module--txt-c">
-              <label for="mce-EMAIL" class="mailchimp-error">Email adress</label>
+              <label for="mce-EMAIL" class="mailchimp-error">البريد الالكتروني *</label>
             </div>
 
             <div id="mc_embed_signup_scroll">
 
               <div class="form-col mc-field-group">
-                <label>Email adress <span class="asterisk">*</span></label>
+                <label>البريد الالكتروني * <span class="asterisk">*</span></label>
                 <input type="email" value="" name="email" class="required email" id="mce-EMAIL" required>
               </div>
               <div class="form-col mc-field-group">
-                <label for="mce-NAME">Namn <span class="asterisk">*</span>
+                <label for="mce-NAME">الاسم * <span class="asterisk">*</span>
                 </label>
                 <input type="text" value="" maxlength="80" name="last_name" class="required" id="mce-LASTNAME" required>
               </div>
               <div class="form-col mc-field-group size1of2">
-                <label for="mce-PHONE">Telefon nummer</label>
+                <label for="mce-PHONE">رقم الهاتف</label>
                 <input type="number" maxlength="40" name="phone" class="" value="" id="mce-PHONE">
               </div>
               <div class="form-col mc-field-group">
-                <label for="mce-COMPANY">Företag</label>
+                <label for="mce-COMPANY">الشركة</label>
                 <input type="text" value="" maxlength="40" name="company" class="" id="mce-COMPANY">
               </div>
               <div class="form-col form-col--full-width mc-field-group">
-                <label for="mce-CITY">Stad</label>
+                <label for="mce-CITY">موقع</label>
                 <input type="text" value="" name="00N580000088gDR" class="" id="mce-CITY">
               </div>
               <div class="mc-field-group input-group">
                 <div class="input-group-content">
-                  <p>Jag är intresserad av... <span class="asterisk">*</span></p>
+                  <p>أنا مهتم ب... * <span class="asterisk">*</span></p>
                   <ul>
                     <li>
                       <input type="radio" value="Posting jobs" name="00N580000088fVu" id="mce-MMERGE5-0">
-                      <label for="mce-MMERGE5-0">Lägga upp jobb</label>
+                      <label for="mce-MMERGE5-0">نشر فرص العمل</label>
                     </li>
                     <li>
                       <input type="radio" value="Finding jobs" name="00N580000088fVu" id="mce-MMERGE5-1" checked>
-                      <label for="mce-MMERGE5-1">Hitta jobb</label>
+                      <label for="mce-MMERGE5-1">العثور على وظائف</label>
                     </li>
                     <li>
                       <input type="radio" value="Helping out" name="00N580000088fVu" id="mce-MMERGE5-2">
-                      <label for="mce-MMERGE5-2">Hjälpa till</label>
+                      <label for="mce-MMERGE5-2">يساعد خارجا</label>
                     </li>
                     <li>
                       <input type="radio" value="Donating" name="00N580000088fVu" id="mce-MMERGE5-3">
-                      <label for="mce-MMERGE5-3">Donera</label>
+                      <label for="mce-MMERGE5-3">تبرع</label>
                     </li>
                     <li>
                       <input type="radio" value="Knowing more" name="00N580000088fVu" id="mce-MMERGE5-4">
-                      <label for="mce-MMERGE5-4">Veta mer</label>
+                      <label for="mce-MMERGE5-4">معرفة المزيد</label>
                     </li>
                   </ul>
                 </div>
@@ -340,7 +266,7 @@ module--black
                 <input type="text" name="b_ac005505ee4f55f35fc7bdc5d_4cc4f7c8c5" tabindex="-1" value="">
               </div>
               <div class="clear">
-                <input type="submit" value="Spara" name="submit" id="mc-embedded-subscribe" class="button border-btn btn-large border-btn--pink">
+                <input type="submit" value="Submit" name="submit" id="mc-embedded-subscribe" class="button border-btn btn-large border-btn--pink">
               </div>
             </div>
           </form>
@@ -362,16 +288,16 @@ module--black
     module--txt-c
     module--black
     ">
-        <h2 class="bordered bordered--secondary">Skriv in din promokod</h2>
-        <p class="module--txt-l">Vi testar just nu plattformen med en exklusiv grupp företag och nyanlända som har blivit tilldelade en promokod som ger tillgång till plattformen. Om du inte har en promokod men är intresserad av att använda plattformen, registrera gärna ditt intresse. Tack!</p>
+        <h2 class="bordered bordered--secondary">أدخل الشفرة الترويجية</h2>
+        <p class="module--txt-l">نحن حاليا باختبار منصة مع مجموعة حصرية من شركات والوافدين الجدد التي تم توفيرها مع الرمز الترويجي للوصول إلى المنصة. إذا لم يكن لديك الرمز الترويجي وكنت مهتما في الاستفادة من منصة يرجى النقر على الاشتراك وتسجيل اهتمامك هناك. شكرا!</p>
         <form class="promo-form" onsubmit="return submitPromoCode()">
           <div class="form-col form-col--full-width">
-            <input type="password" placeholder="Promokod" id="promo-code-input" value="" />
+            <input type="password" placeholder="شفرة تخفيض" id="promo-code-input" value="" />
           </div>
           <div class="form-response" id="promo-error"></div>
           <div class="form-response" id="promo-success"></div>
           <div class="form-col form-col--submit-btn">
-            <input type="submit" value="Ta mig till applikationen" class="border-btn btn-large border-btn--blue">
+            <input type="submit" value="يأخذني إلى تطبيق" class="border-btn btn-large border-btn--blue">
           </div>
         </form>
       </div>
