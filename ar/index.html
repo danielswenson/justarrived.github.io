@@ -105,6 +105,10 @@
 
     <div class="home">
   <div id="content">
+    <div class="thank-you-flash-notice" style="display:none">
+      <h3>Thank you!</h3>
+    </div>
+
     <section class="
   section--hero
   module
@@ -534,7 +538,6 @@
             <script>
               function getCurrentURIForRedirect() {
                 var ele = document.getElementById("salesforce_retURL");
-                console.log('ele');
                 ele.setAttribute("value", window.location.href + "?message=thanks");
               }
 
