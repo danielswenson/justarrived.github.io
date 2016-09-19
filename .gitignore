@@ -4,6 +4,7 @@
 
 node_modules/
 Gemfile.lock
+tmp/
 
 LICENSE
 _site
