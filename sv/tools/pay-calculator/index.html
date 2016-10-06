@@ -84,7 +84,7 @@
 
       <div class="nav-right">
         <a href="/sv/company/"><span>För Företag</span></a>
-        <a href="/sv/newcomer/"><span>För Nyanlända</span></a>
+        <a href="/sv/newcomer/"><span>För nyanlända</span></a>
         <a href="/sv/faq/"><span>FAQ</span></a>
         <a href="/sv/about-us/"><span>Om oss</span></a>
         <a href="/sv/blog/"><span>Blogg</span></a>
@@ -116,11 +116,11 @@
     module-content--centered
     module--black
     ">
-        <h2 class="bordered bordered--primary bordered--centered module--txt-c">Hourly pay calculator</h2>
+        <h2 class="bordered bordered--primary bordered--centered module--txt-c">Beräkna timlön</h2>
 
         <form action="/hourly-pays" method="GET" class="js-pay-calculator-form" onsubmit="payCalculatorFormSubmit(); return false;">
           <div class="form-col form-col--full-width">
-            <label for="gross_salary">Gross Salary <span class="asterisk">*</span></label>
+            <label for="gross_salary">bruttolön <span class="asterisk">*</span></label>
             <input type="number" value="" name="gross_salary" class="required" id="gross_salary" required>
           </div>
 
@@ -134,10 +134,10 @@
 
             <table class="boring-table full-width">
               <tr>
-                <td>Gross Salary</td>
-                <td>Net Salary</td>
-                <td>Excluding VAT</td>
-                <td>Including VAT</td>
+                <td>bruttolön</td>
+                <td>Nettolön</td>
+                <td>Exclusive moms</td>
+                <td>Inclusive moms</td>
               </tr>
               <tr>
                 <td id='js-gross-salary-result'></td>
@@ -167,7 +167,7 @@
         <h3>Sätt igång</h3>
         <ul class="footer-link-list">
           <li><a href="https://app.justarrived.se/#/user/signin">Logga in</a></li>
-          <li><a href="#" class="cd-popup-trigger-newcomer-signup">Newcomer registrering</a></li>
+          <li><a href="#" class="cd-popup-trigger-newcomer-signup">Registrering för nyanlända</a></li>
           <li><a href="#" class="cd-popup-trigger-signin">Lägg upp jobb</a></li>
         </ul>
       </div>
