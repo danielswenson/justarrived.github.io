@@ -6,9 +6,9 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title>Just Arrived - Archive</title>
-	<meta name="description" content="Our blog archive">
-	<link rel="canonical" href="http://justarrived.se/blog/archive/">
+	<title>Just Arrived - Backward phone numbers</title>
+	<meta name="description" content="Backward phone numbers">
+	<link rel="canonical" href="http://justarrived.se/blog/2016/10/05/backward-phone-numbers/">
 
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
@@ -70,13 +70,13 @@
           
           
 
-          <a href="/blog/archive/">
+          <a href="/blog/2016/10/05/backward-phone-numbers/">
             <span class="lang-en">English</span>
           </a>
-          <a href="/sv/blog/archive/">
+          <a href="/sv/blog/2016/10/05/backward-phone-numbers/">
             <span class="lang-sv">Svenska</span>
           </a>
-          <a href="/ar/blog/archive/">
+          <a href="/ar/blog/2016/10/05/backward-phone-numbers/">
             <span class="lang-ar">العربية</span>
           </a>
         </div>
@@ -119,83 +119,47 @@ module--white-bg
       <div class="post">
 
             <header class="post-header">
-              <h1 class="post-title">Archive</h1>
-              <p class="post-meta"></p>
+              <h1 class="post-title">Backward phone numbers</h1>
+              <p class="post-meta">Oct 5, 2016</p>
             </header>
 
             <article class="post-content">
               
 
-              <ul class="post-list">
-  
-    <li>
-      <span class="post-meta">Oct 5, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/10/05/backward-phone-numbers/">Backward phone numbers</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Sep 29, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/09/29/a-story-from-our-community-meetup/">A story from our Community Meetup</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Sep 21, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/09/21/tobias-tikka/">Meet the team - Tobias Tikka</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Sep 14, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/09/14/jacob-burenstam/">Meet the team - Jacob Burenstam</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Sep 6, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/09/06/per-clingweld/">Meet the team - Per Clingweld</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Aug 31, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/08/31/andreas-konig/">Meet the team - Andreas König</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Aug 24, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/08/24/anna-hornmark/">Meet the team - Anna Hörnmark</a>
-      </h2>
-    </li>
-   
-    <li>
-      <span class="post-meta">Aug 8, 2016</span>
-      <h2>
-         <a class="post-link" href="/ar/blog/2016/08/08/jesper-sundstrom/">Meet the team - Jesper Sundström</a>
-      </h2>
-    </li>
-   
-</ul>
+              <p>This post will, hopefully, be one of many posts about what its like to be an engineering/developer at Just Arrived.</p>
 
-<!-- Pagination links -->
-<div class="post-pagination">
-  
-    <span class="previous">Previous</span>
-  
-  <span class="page_number ">Page: 1 of 1</span>
-  
-    <span class="next ">Next</span>
-  
-</div>
+<p>There are many things that makes Just Arrived unique as a startup. One of those things is that we need to support multiple language, even right-to-left languages, from the start, while most other companies can defer that complexity to much much later (if ever!).</p>
+
+<p>This is a short story about one of the many challenges building multi-lingual applications, with right-to-left support.</p>
+
+<p>I’ve been developing for the web for more than 5 years and i recently learnt something that I’ve never encountered before, namely the css property <code class="highlighter-rouge">unicode-bidi</code> (heard of it before??).</p>
+
+<p>Recently we did a major upgrade of our website. We moved justarrived.se from Wordpress to Jekyll as well as restructured and rewrote a lot of the content for the site.
+One, seemingly small, thing that we designed was a “contact us” section where the names, roles, email and phone numbers for each of our team members where to be displayed. It got built real fast and everything seemed to have worked up until we tested the site in Arabic.</p>
+
+<blockquote>
+  <p>Huston we have a problem…</p>
+</blockquote>
+
+<p>The problems was that phone numbers where displayed backwards! So <code class="highlighter-rouge">+46 73 500 0001</code> was displayed as <code class="highlighter-rouge">0001 500 73 46+</code>. Not really what we were after…</p>
+
+<p>The solution turned out to be real simple and it was a CSS property that I’ve never seen or heard before.</p>
+
+<p>The solution was to add (we use SASS):</p>
+
+<pre><code class="language-CSS">.rtl-locale-direction {
+  &amp; .formatted-number {
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+}
+</code></pre>
+
+<p><code class="highlighter-rouge">.rtl-locale-direction</code> is a class we set when the a right-to-left language is set, so we can add custom styling. Here is the <a href="https://github.com/justarrived/justarrived.github.io/commit/038c6ce88dfae17812c15cb87d14913b6534dd47#diff-bd1150aed1e0fcd87989c84873d5912cR48">commit</a> that fixed it.</p>
+
+<p>You can read more about <code class="highlighter-rouge">unicode-bidi</code> <a href="http://www.w3schools.com/cssref/pr_text_unicode-bidi.asp">over at w3schools</a>.</p>
+
+<p>Just one of those things that really tells you how mature the web has become and one of the unique challenges we at Just Arrived face on a day to day basis.</p>
 
             </article>
 
