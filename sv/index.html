@@ -59,7 +59,7 @@
     <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 	<div id="inner-header" class="wrap cf">
 
-		<a href="/sv/" rel="nofollow">
+		<a href="/sv/" rel="nofollow" data-track="click" data-track-label="Nav logo click">
 			<div class="header__logo">Just Arrived</div>
 		</a>
 
@@ -70,25 +70,37 @@
           
           
 
-          <a href="/">
+          <a href="/" data-track="click" data-track-label="Language switch (en)">
             <span class="lang-en">English</span>
           </a>
-          <a href="/sv/">
+          <a href="/sv/" data-track="click" data-track-label="Language switch (sv)">
             <span class="lang-sv">Svenska</span>
           </a>
-          <a href="/ar/">
+          <a href="/ar/" data-track="click" data-track-label="Language switch (ar)">
             <span class="lang-ar">العربية</span>
           </a>
         </div>
       </div>
 
       <div class="nav-right">
-        <a href="/sv/company/"><span>För Företag</span></a>
-        <a href="/sv/newcomer/"><span>För nyanlända</span></a>
-        <a href="/sv/faq/"><span>FAQ</span></a>
-        <a href="/sv/about-us/"><span>Om oss</span></a>
-        <a href="/sv/blog/"><span>Blogg</span></a>
-        <a href="https://app.justarrived.se/#/user/signin"><span>Logga in</span></a>
+        <a href="/sv/company/" data-track="click" data-track-label="Nav to company page">
+          <span>För Företag</span>
+        </a>
+        <a href="/sv/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+          <span>För nyanlända</span>
+        </a>
+        <a href="/sv/faq/" data-track="click" data-track-label="Nav to FAQ page">
+          <span>FAQ</span>
+        </a>
+        <a href="/sv/about-us/" data-track="click" data-track-label="Nav to about us page">
+          <span>Om oss</span>
+        </a>
+        <a href="/sv/blog/" data-track="click" data-track-label="Nav to blog page">
+          <span>Blogg</span>
+        </a>
+        <a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+          <span>Logga in</span>
+        </a>
       </div>
     </div>
 
@@ -117,8 +129,24 @@
           <h1>Vi ger nyanlända i Sverige en chans att komma in på arbetsmarknaden</h1>
           <p>Vi sammanför nyanlända med svenska företag som behöver hjälp med dagliga aktiviteter. Vår digitala plattform gör det enkelt för företag att lägga upp enkla uppdrag och tjänster som sedan matchas med nyanlända som söker jobb.</p>
           <div class="section--hero__social-media">
-            <a href="https://www.facebook.com/JustArrivedSE/" title="Facebook" rel="noopener noreferrer" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp; Facebook</a>
-            <a href="https://twitter.com/JustArrivedSE" title="Twitter" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; Twitter</a>
+            <a href="https://www.facebook.com/JustArrivedSE/"
+              title="Facebook"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-track="click"
+              data-track-label="Top banner Facebook click">
+              <i class="fa fa-facebook" aria-hidden="true"></i>&nbsp; Facebook
+            </a>
+
+            <a href="https://twitter.com/JustArrivedSE"
+              title="Twitter"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-track="click"
+              data-track-label="Top banner Twitter click">
+              <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; Twitter
+            </a>
+
           </div>
         </div>
       </div>
@@ -169,7 +197,12 @@
       <h3 class="bordered bordered--primary bordered--centered">För företag</h3>
       <p class="text">Lär dig hur enkelt det är att anställa genom Just Arrived</p>
     </div>
-    <a href="/sv/company/" class="primary-btn btn-large">Sätt igång</a>
+    <a href="/sv/company/"
+      class="primary-btn btn-large"
+      data-track="click"
+      data-track-label="Goto company page click (cta bar)">
+      Sätt igång
+    </a>
   </div>
 
   <div class="module-content module-content--right-half">
@@ -177,7 +210,12 @@
       <h3 class="bordered bordered--primary bordered--centered">För nyanlända</h3>
       <p class="text">Vad kan Just Arrived göra för dig som letar jobb i Sverige?</p>
     </div>
-    <a href="/sv/newcomer/" class="primary-btn btn-large">Läs mer</a>
+    <a href="/sv/newcomer/"
+      class="primary-btn btn-large"
+      data-track="click"
+      data-track-label="Goto newcomer page click (cta bar)">
+      Läs mer
+    </a>
   </div>
 
 </section>
