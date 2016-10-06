@@ -52,11 +52,43 @@
     });
   }
 
+  function trackNewcomerRegPopupOpen() {
+    $('.cd-popup-trigger-newcomer-signup').on('click', function() {
+      analytics.track('Newcomer reg popup open');
+    });
+  }
+
+  function trackCompanyRegPopupOpen() {
+    $('.cd-popup-trigger-signin').on('click', function() {
+      analytics.track('Company reg popup open');
+    });
+  }
+
+  function initTrackOfDOMElements() {
+    $('[data-track]').each(function() {
+      var $element = $(this);
+      var eventName = $element.attr('data-track') || 'click';
+      var label = $element.attr('data-track-label');
+
+      if (label) {
+        // Add event listener to element
+        $(document).on(eventName, function() {
+          analytics.track(label, {});
+        });
+      } else {
+        console.error('[just-track] data-track-label can *not* be blank!')
+      }
+    });
+  }
+
   var JustTrack = {
     init: function() {
       trackCompanySignup();
       trackNewcomerSignupStart();
       trackNewcomerSignupDone();
+      trackNewcomerRegPopupOpen();
+      trackCompanyRegPopupOpen();
+      initTrackOfDOMElements();
     }
   };
 
