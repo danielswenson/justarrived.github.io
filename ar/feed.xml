@@ -6,8 +6,8 @@
 </description>
     <link>http://justarrived.se//link>
     <atom:link href="http://justarrived.se/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 Oct 2016 17:55:30 +0200</pubDate>
-    <lastBuildDate>Fri, 07 Oct 2016 17:55:30 +0200</lastBuildDate>
+    <pubDate>Sun, 09 Oct 2016 10:10:21 +0200</pubDate>
+    <lastBuildDate>Sun, 09 Oct 2016 10:10:21 +0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -22,7 +22,7 @@
 One, seemingly small, thing that we did was to design a “contact us” section where the names, roles, email and phone numbers for each of our team members where to be displayed. It got built real fast and everything seemed to have worked up until we tested the site in Arabic.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Huston we have a problem…&lt;/p&gt;
+  &lt;p&gt;Houston we have a problem…&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;The problems was that phone numbers where displayed backwards! So &lt;code class=&quot;highlighter-rouge&quot;&gt;+46 73 500 0001&lt;/code&gt; was displayed as &lt;code class=&quot;highlighter-rouge&quot;&gt;0001 500 73 46+&lt;/code&gt;. Not really what we were after…&lt;/p&gt;
