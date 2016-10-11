@@ -6,9 +6,59 @@
 </description>
     <link>http://justarrived.se//link>
     <atom:link href="http://justarrived.se/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 11 Oct 2016 21:40:22 +0200</pubDate>
-    <lastBuildDate>Tue, 11 Oct 2016 21:40:22 +0200</lastBuildDate>
+    <pubDate>Tue, 11 Oct 2016 22:36:33 +0200</pubDate>
+    <lastBuildDate>Tue, 11 Oct 2016 22:36:33 +0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>1x3x3x3 - 1 feature, 3 people, 3 hours, 3 languages</title>
+        <description>&lt;p&gt;&lt;strong&gt;3 people, 3 hours, 3 languages. A collaboration story.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Today I had the pleasure of working remotely with Emma Långstöm (of Antrop) and Ahmed Kaddoura launching a new “howto” section on our public website. We were able to deploy the new section in less than three hours of work in three languages (Arabic, English and Swedish).&lt;/p&gt;
+
+&lt;p&gt;It all started at 15:46 today when Emma uploaded a few screenshots, icons and copy to our community Slack channel (#website), of a new “howto” section that would make it clear how our process works.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/1x3x3x3/emma-slack-response.png&quot; alt=&quot;Emma Slack&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A few of us started iterating on the copy using Google docs. Meanwhile Emma gave a shout out to Ahmed, who is absolutely awesome and have been helping us with the site, and asked if he could provide an arabic translation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/1x3x3x3/ahmed-slack-response.png&quot; alt=&quot;Ahmed Slack Response&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Awesome!&lt;/p&gt;
+
+&lt;p&gt;We kept iterating on the copy a but more and finally ended up with something that we could live with.
+I exposed my local development environment using &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt;, so everybody could give feedback as I developed the section.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/1x3x3x3/design-conversation.png&quot; alt=&quot;Slack Conversation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Roughly an hour later and many, &lt;em&gt;small&lt;/em&gt;, iterations later, we had something that looked pretty enough.&lt;/p&gt;
+
+&lt;p&gt;Ahmed and I then spent the next hour or so tweaking the right-to-left version of the section and made sure it looked good on all devices.&lt;/p&gt;
+
+&lt;p&gt;Here is the final result:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Desktop&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/1x3x3x3/desktop-en.png&quot; alt=&quot;Desktop screenshot English&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/1x3x3x3/desktop-ar.png&quot; alt=&quot;Desktop screenshot Arabic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tablet&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/1x3x3x3/tablet-en.png&quot; alt=&quot;Tablet screenshot English&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/1x3x3x3/tablet-ar.png&quot; alt=&quot;Tablet screenshot Arabic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you Ahmed and Emma! A real pleasure to work with you :)&lt;/p&gt;
+</description>
+        <pubDate>Tue, 11 Oct 2016 00:00:00 +0200</pubDate>
+        <link>http://justarrived.se/blog/2016/10/11/moving-fast-in-three-languages/</link>
+        <guid isPermaLink="true">http://justarrived.se/blog/2016/10/11/moving-fast-in-three-languages/</guid>
+        
+        <category>engineering</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
     
       <item>
         <title>Backward phone numbers</title>
