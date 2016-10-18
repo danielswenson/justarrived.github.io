@@ -195,14 +195,9 @@ module--black
   <input type="email" value="" name="email" class="required email" id="email" required>
 </div>
 
-<div class="form-col size1of2">
+<div class="form-col form-col--full-width">
   <label for="phone">Phone number</label>
-  <input type="number" maxlength="40" name="phone" class="" value="" id="phone">
-</div>
-
-<div class="form-col">
-  <label>Personnummer <span class="asterisk">*</span></label>
-  <input type="text" value="" placeholder="Needed for invoicing purposes" name="ssn" class="required" id="ssn" required>
+  <input type="number" maxlength="40" name="phone" class="" value="" id="phone" placeholder="073 500 0001">
 </div>
 
 
@@ -238,26 +233,6 @@ module--black
   <label>End date <span class="asterisk">*</span></label>
   <input type="text" value="" placeholder="YYYY-MM-DD" name="job_end_date" class="required" id="job_end_date" required>
 </div>
-
-<!-- <div class="form-col form-col--full-width">
-  <div class="input-group">
-    <div class="input-group-content">
-      <p>
-        Salary <span class="asterisk">*</span>
-      </p>
-
-      <ul id="js-hourly-salary-input-target"></ul>
-
-    </div>
-  </div>
-</div> -->
-
-<!-- START: HTML TEMPLATE -->
-<div id="js-hourly-salary-input-template" style="display:none;">
-  <input type="radio" value="%grossval%" name="gross_salary" id="salary-value-%val%" required>
-  <label for="salary-value-%val%">%val% SEK/h</label>
-</div>
-<!-- END: HTML TEMPLATE -->
 
 <div class="form-col form-col--full-width">
   <label>Description <span class="asterisk">*</span></label>
