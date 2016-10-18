@@ -6,8 +6,8 @@
 </description>
     <link>http://justarrived.se//link>
     <atom:link href="http://justarrived.se/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 18 Oct 2016 15:36:23 +0200</pubDate>
-    <lastBuildDate>Tue, 18 Oct 2016 15:36:23 +0200</lastBuildDate>
+    <pubDate>Tue, 18 Oct 2016 17:42:38 +0200</pubDate>
+    <lastBuildDate>Tue, 18 Oct 2016 17:42:38 +0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -108,7 +108,9 @@ One, seemingly small, thing that we did was to design a “contact us” section
     
       <item>
         <title>A story from our Community Meetup</title>
-        <description>&lt;p&gt;During Wednesday evening, &lt;a href=&quot;http://antrop.se/&quot; title=&quot;Antrop - Design Agency&quot;&gt;Antrop&lt;/a&gt; welcomed Just Arrived together with the community of contributors for a launch of the new website. The office was transformed into a friendly venue with snacks, refreshments and great mingle. The thought was to allow our community to, in each own’s phase be able to catch up with one another.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/images/blog/team-picture.jpg&quot; alt=&quot;The team&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;During Wednesday evening, &lt;a href=&quot;http://antrop.se/&quot; title=&quot;Antrop - Design Agency&quot;&gt;Antrop&lt;/a&gt; welcomed Just Arrived together with the community of contributors for a launch of the new website. The office was transformed into a friendly venue with snacks, refreshments and great mingle. The thought was to allow our community to, in each own’s phase be able to catch up with one another.&lt;/p&gt;
 
 &lt;p&gt;After a while when everyone had food in their stomachs, and drinks in their hands, the attention was awarded to Anna who guided us through the evening. During the program she walked through the journey of Just Arrived and how it has transformed since our last meetup on May 23rd. Great news succeeded each other, which gave Jacob our CTO, the confidence to agree to do a live deployment of our new website (the one you are currently visiting) ;)&lt;/p&gt;
 
