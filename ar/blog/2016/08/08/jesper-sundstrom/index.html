@@ -73,62 +73,91 @@
 <body data-lang="ar" class="ar-locale rtl-locale-direction" itemscope="" itemtype="http://schema.org/WebPage">
 
   <div class="container">
-    <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-	<div id="inner-header" class="wrap cf">
+    <nav class="header">
+	<a href="/ar/" rel="nofollow" data-track="click" data-track-label="Nav logo click">
+		<div class="header__logo">Just Arrived</div>
+	</a>
 
-		<a href="/ar/" rel="nofollow" data-track="click" data-track-label="Nav logo click">
-			<div class="header__logo">Just Arrived</div>
+	<div class="lang-options">
+		
+		
+		
+
+		<a href="/blog/2016/08/08/jesper-sundstrom/" data-track="click" data-track-label="Language switch (en)">
+			<span class="lang-en">English</span>
 		</a>
-
-    <div class="nav-links">
-      <div class="nav-left">
-        <div class="lang-options">
-          
-          
-          
-
-          <a href="/blog/2016/08/08/jesper-sundstrom/" data-track="click" data-track-label="Language switch (en)">
-            <span class="lang-en">English</span>
-          </a>
-          <a href="/sv/blog/2016/08/08/jesper-sundstrom/" data-track="click" data-track-label="Language switch (sv)">
-            <span class="lang-sv">Svenska</span>
-          </a>
-          <a href="/ar/blog/2016/08/08/jesper-sundstrom/" data-track="click" data-track-label="Language switch (ar)">
-            <span class="lang-ar">العربية</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="nav-right">
-        <a href="/ar/company/" data-track="click" data-track-label="Nav to company page">
-          <span>للشركات</span>
-        </a>
-        <a href="/ar/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
-          <span>للوافدين الجدد</span>
-        </a>
-        <a href="/ar/faq/" data-track="click" data-track-label="Nav to FAQ page">
-          <span>الأسئلة الشائعة</span>
-        </a>
-        <a href="/ar/about-us/" data-track="click" data-track-label="Nav to about us page">
-          <span>عن الشركة</span>
-        </a>
-        <a href="/ar/blog/" data-track="click" data-track-label="Nav to blog page">
-          <span>المدونة</span>
-        </a>
-        <a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
-          <span>تسجيل الدخول</span>
-        </a>
-      </div>
-    </div>
-
-		<!-- <div class="header__btns">
-      <a href="https://app.justarrived.se/#/user/signin" class="border-btn pull-right"><span>تسجيل الدخول</span></a>
-       <a href="/ar/newcomer/" class="primary-btn">تسجيل الدخول</a>
-      <a href="#" class="border-btn cd-popup-trigger-promo">تسجيل الدخول مع الرمز الترويجي</a>
-		</div> -->
-
+		<a href="/sv/blog/2016/08/08/jesper-sundstrom/" data-track="click" data-track-label="Language switch (sv)">
+			<span class="lang-sv">Svenska</span>
+		</a>
+		<a href="/ar/blog/2016/08/08/jesper-sundstrom/" data-track="click" data-track-label="Language switch (ar)">
+			<span class="lang-ar">العربية</span>
+		</a>
 	</div>
-</header>
+
+	<ul class="topnav">
+		<li class="hamburger-icon">
+			<a href="javascript:void(0);" onclick="toggleHamburger()">&#9776;</a>
+		</li>
+
+		<li>
+			<a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+				<span>تسجيل الدخول</span>
+			</a>
+		</li>
+		<li class="about-us">
+			<a href="/ar/about-us/" data-track="click" data-track-label="Nav to about us page">
+				<span>عن الشركة</span>
+			</a>
+		</li>
+		<li class="blog">
+			<a href="/ar/blog/" data-track="click" data-track-label="Nav to blog page">
+				<span>المدونة</span>
+			</a>
+		</li>
+		<li>
+			<a href="/ar/company/" data-track="click" data-track-label="Nav to company page">
+				<span>للشركات</span>
+			</a>
+		</li>
+		<li>
+			<a href="/ar/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+				<span>للوافدين الجدد</span>
+			</a>
+		</li>
+	</ul>
+
+	<!-- HAMBURGER DROPDOWN -->
+
+	<div class="hide" id="responsive-header">
+    <ul>
+			<li>
+				<a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+					<span>تسجيل الدخول</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ar/about-us/" data-track="click" data-track-label="Nav to about us page">
+					<span>عن الشركة</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ar/blog/" data-track="click" data-track-label="Nav to blog page">
+					<span>المدونة</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ar/company/" data-track="click" data-track-label="Nav to company page">
+					<span>للشركات</span>
+				</a>
+			</li>
+			<li>
+				<a href="/ar/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+					<span>للوافدين الجدد</span>
+				</a>
+			</li>
+    </ul>
+  </div>
+</nav>
 
 
     
@@ -424,6 +453,18 @@ twq('init','nvete');
 twq('track','PageView');
 </script>
 <!-- End Twitter universal website tag code -->
+
+<script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function toggleHamburger() {
+    var x = document.getElementById("responsive-header");
+    if (x.className === "hide") {
+        x.className = "responsive";
+    } else {
+        x.className = "hide";
+    }
+  }
+</script>
 
 
 </body>

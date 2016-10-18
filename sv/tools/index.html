@@ -73,62 +73,91 @@
 <body data-lang="sv" class="sv-locale ltr-locale-direction" itemscope="" itemtype="http://schema.org/WebPage">
 
   <div class="container">
-    <header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-	<div id="inner-header" class="wrap cf">
+    <nav class="header">
+	<a href="/sv/" rel="nofollow" data-track="click" data-track-label="Nav logo click">
+		<div class="header__logo">Just Arrived</div>
+	</a>
 
-		<a href="/sv/" rel="nofollow" data-track="click" data-track-label="Nav logo click">
-			<div class="header__logo">Just Arrived</div>
+	<div class="lang-options">
+		
+		
+		
+
+		<a href="/tools/" data-track="click" data-track-label="Language switch (en)">
+			<span class="lang-en">English</span>
 		</a>
-
-    <div class="nav-links">
-      <div class="nav-left">
-        <div class="lang-options">
-          
-          
-          
-
-          <a href="/tools/" data-track="click" data-track-label="Language switch (en)">
-            <span class="lang-en">English</span>
-          </a>
-          <a href="/sv/tools/" data-track="click" data-track-label="Language switch (sv)">
-            <span class="lang-sv">Svenska</span>
-          </a>
-          <a href="/ar/tools/" data-track="click" data-track-label="Language switch (ar)">
-            <span class="lang-ar">العربية</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="nav-right">
-        <a href="/sv/company/" data-track="click" data-track-label="Nav to company page">
-          <span>För Företag</span>
-        </a>
-        <a href="/sv/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
-          <span>För nyanlända</span>
-        </a>
-        <a href="/sv/faq/" data-track="click" data-track-label="Nav to FAQ page">
-          <span>FAQ</span>
-        </a>
-        <a href="/sv/about-us/" data-track="click" data-track-label="Nav to about us page">
-          <span>Om oss</span>
-        </a>
-        <a href="/sv/blog/" data-track="click" data-track-label="Nav to blog page">
-          <span>Blogg</span>
-        </a>
-        <a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
-          <span>Logga in</span>
-        </a>
-      </div>
-    </div>
-
-		<!-- <div class="header__btns">
-      <a href="https://app.justarrived.se/#/user/signin" class="border-btn pull-right"><span>Logga in</span></a>
-       <a href="/sv/newcomer/" class="primary-btn">Jag vill söka jobb</a>
-      <a href="#" class="border-btn cd-popup-trigger-promo">Logga in med promokod</a>
-		</div> -->
-
+		<a href="/sv/tools/" data-track="click" data-track-label="Language switch (sv)">
+			<span class="lang-sv">Svenska</span>
+		</a>
+		<a href="/ar/tools/" data-track="click" data-track-label="Language switch (ar)">
+			<span class="lang-ar">العربية</span>
+		</a>
 	</div>
-</header>
+
+	<ul class="topnav">
+		<li class="hamburger-icon">
+			<a href="javascript:void(0);" onclick="toggleHamburger()">&#9776;</a>
+		</li>
+
+		<li>
+			<a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+				<span>Logga in</span>
+			</a>
+		</li>
+		<li class="about-us">
+			<a href="/sv/about-us/" data-track="click" data-track-label="Nav to about us page">
+				<span>Om oss</span>
+			</a>
+		</li>
+		<li class="blog">
+			<a href="/sv/blog/" data-track="click" data-track-label="Nav to blog page">
+				<span>Blogg</span>
+			</a>
+		</li>
+		<li>
+			<a href="/sv/company/" data-track="click" data-track-label="Nav to company page">
+				<span>För Företag</span>
+			</a>
+		</li>
+		<li>
+			<a href="/sv/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+				<span>För nyanlända</span>
+			</a>
+		</li>
+	</ul>
+
+	<!-- HAMBURGER DROPDOWN -->
+
+	<div class="hide" id="responsive-header">
+    <ul>
+			<li>
+				<a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+					<span>Logga in</span>
+				</a>
+			</li>
+			<li>
+				<a href="/sv/about-us/" data-track="click" data-track-label="Nav to about us page">
+					<span>Om oss</span>
+				</a>
+			</li>
+			<li>
+				<a href="/sv/blog/" data-track="click" data-track-label="Nav to blog page">
+					<span>Blogg</span>
+				</a>
+			</li>
+			<li>
+				<a href="/sv/company/" data-track="click" data-track-label="Nav to company page">
+					<span>För Företag</span>
+				</a>
+			</li>
+			<li>
+				<a href="/sv/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+					<span>För nyanlända</span>
+				</a>
+			</li>
+    </ul>
+  </div>
+</nav>
 
 
     
@@ -420,6 +449,18 @@ twq('init','nvete');
 twq('track','PageView');
 </script>
 <!-- End Twitter universal website tag code -->
+
+<script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function toggleHamburger() {
+    var x = document.getElementById("responsive-header");
+    if (x.className === "hide") {
+        x.className = "responsive";
+    } else {
+        x.className = "hide";
+    }
+  }
+</script>
 
 
 </body>
