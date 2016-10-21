@@ -211,13 +211,12 @@ One, seemingly small, thing that we did was to design a “contact us” section
 
 <pre><code class="language-CSS">.rtl-locale-direction {
   &amp; .formatted-number {
-    direction: ltr;
-    unicode-bidi: embed;
+    unicode-bidi: plaintext;
   }
 }
 </code></pre>
 
-<p><code class="highlighter-rouge">.rtl-locale-direction</code> is the class we set when the a right-to-left language is used, so we can add custom styling. Here is the <a href="https://github.com/justarrived/justarrived.github.io/commit/038c6ce88dfae17812c15cb87d14913b6534dd47#diff-bd1150aed1e0fcd87989c84873d5912cR48">commit</a> that fixed phone numbers being backwards.</p>
+<p><code class="highlighter-rouge">.rtl-locale-direction</code> is the class we set when the a right-to-left language is used, so we can add custom styling on right-to-left locales. That selector has <code class="highlighter-rouge">direction: rtl</code> set, so we need to override it with <code class="highlighter-rouge">unicode-bidi: plaintext</code>.</p>
 
 <p>You can read more about <code class="highlighter-rouge">unicode-bidi</code> <a href="http://www.w3schools.com/cssref/pr_text_unicode-bidi.asp">over at w3schools</a>.</p>
 
