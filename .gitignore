@@ -15,18 +15,24 @@ script/
 # Locale ignores
 ar/assets/
 sv/assets/
+en/assets/
 
 ar/script/
 sv/script/
+en/script/
 
 ar/LICENSE
 sv/LICENSE
+en/LICENSE
 
 ar/README.md
 sv/README.md
+en/README.md
 
 ar/Gemfile
 sv/Gemfile
+en/Gemfile
 
 ar/Gemfile.lock
 sv/Gemfile.lock
+en/Gemfile.lock
