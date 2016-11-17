@@ -9,6 +9,8 @@
 
 	<script type="text/javascript">
 		CURRENT_LOCALE = 'sv';
+		DEFAULT_LOCALE = 'sv';
+		AVAILABLE_LOCALES =  ["sv", "en", "ar"];
 	</script>
 
 	<title>Just Arrived</title>
@@ -80,21 +82,23 @@
 		<div class="header__logo">Just Arrived</div>
 	</a>
 
-	<div class="lang-options">
-		
-		
-		
+	<div class="lang-options  js-locale-choser">
+  
+  
+  
 
-		<a href="/about-cookies/" data-track="click" data-track-label="Language switch (sv)">
-			<span class="lang-sv ">Svenska</span>
-		</a>
-		<a href="/en/about-cookies/" data-track="click" data-track-label="Language switch (en)">
-			<span class="lang-en inactive">English</span>
-		</a>
-		<a href="/ar/about-cookies/" data-track="click" data-track-label="Language switch (ar)">
-			<span class="lang-ar inactive">العربية</span>
-		</a>
-	</div>
+  <a href="/about-cookies/" data-track="click" data-track-label="Language switch (sv)">
+    <span class="lang-sv ">Svenska</span>
+  </a>
+  <a href="/en/about-cookies/" data-track="click" data-track-label="Language switch (en)">
+    <span class="lang-en inactive">English</span>
+  </a>
+  <a href="/ar/about-cookies/" data-track="click" data-track-label="Language switch (ar)">
+    <span class="lang-ar inactive">العربية</span>
+  </a>
+  <div class="pulsate-element"></div>
+</div>
+
 
 	<ul class="topnav">
 		<li class="hamburger-icon">
@@ -274,6 +278,13 @@ module--white-bg
     ">
         <h2 class="bordered bordered--primary bordered--centered module--txt-c">Indikera intresse</h2>
         <p>Vi är för tillfället tillgängliga i Stockholm, Göteborg och Malmö. Var vänlig fyll i formuläret för att registrera ditt företags intresse och få veta mer om vad vi kan göra för dig. Tack!</p>
+
+        <p dir="rtl" lang="ar">
+          <a href="#" class="cd-popup-trigger-newcomer-signup discrete-link">
+          هل تبحث عن عمل؟ اضغط هنا.
+          </a>
+        </p>
+
         <div id="mc_embed_signup">
           <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="signup-form js-company-signup-form">
 
@@ -452,20 +463,22 @@ module--white-bg
 <script src="https://use.fontawesome.com/webfontloader/1.6.24/webfontloader.js"></script>
 <script src="https://use.fontawesome.com/a891d007d4.js"></script>
 
-<script src="/assets/js/libs/jquery-3.1.0.js" charset="utf-8"></script>
-<script src="/assets/js/libs/jquery.ajaxchimp.js" charset="utf-8"></script>
-<script src="/assets/js/libs/jquery.ajaxchimp.langs.js" charset="utf-8"></script>
-<script src="/assets/js/libs/modernizr.custom.min.js" charset="utf-8"></script>
-<script src="/assets/js/libs/cookie-disclaimer.js" charset="utf-8"></script>
-<script src="/assets/js/scripts.js" charset="utf-8"></script>
-<script src="/assets/js/pay-calculator.js" charset="utf-8"></script>
-<script src="/assets/js/hourly-pays-input-list.js" charset="utf-8"></script>
-<script src="/assets/js/promo-code.js" charset="utf-8"></script>
-<script src="/assets/js/ja-jobs.js" charset="utf-8"></script>
-<script src="/assets/js/cookie-notice.js" charset="utf-8"></script>
-<script src="/assets/js/just-track.js" charset="utf-8"></script>
-<script src="/assets/js/popups.js" charset="utf-8"></script>
-<script src="/assets/js/site.js" charset="utf-8"></script>
+<script charset="utf-8" src="/assets/js/libs/jquery-3.1.0.js" ></script>
+<script charset="utf-8" src="/assets/js/libs/jquery.ajaxchimp.js" ></script>
+<script charset="utf-8" src="/assets/js/libs/jquery.ajaxchimp.langs.js" ></script>
+<script charset="utf-8" src="/assets/js/libs/modernizr.custom.min.js" ></script>
+<script charset="utf-8" src="/assets/js/libs/cookie-disclaimer.js" ></script>
+<script charset="utf-8" src="/assets/js/scripts.js" ></script>
+<script charset="utf-8" src="/assets/js/pay-calculator.js" ></script>
+<script charset="utf-8" src="/assets/js/hourly-pays-input-list.js" ></script>
+<script charset="utf-8" src="/assets/js/promo-code.js" ></script>
+<script charset="utf-8" src="/assets/js/ja-jobs.js" ></script>
+<script charset="utf-8" src="/assets/js/cookie-notice.js" ></script>
+<script charset="utf-8" src="/assets/js/just-track.js" ></script>
+<script charset="utf-8" src="/assets/js/popups.js" ></script>
+<script charset="utf-8" src="/assets/js/just-i18n.js" ></script>
+<script charset="utf-8" src="/assets/js/utm-builder.js" ></script>
+<script charset="utf-8" src="/assets/js/site.js" ></script>
 <script type="text/javascript">
   Site.init(); // Init site JavaScript
 </script>
