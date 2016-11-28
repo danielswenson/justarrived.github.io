@@ -34,12 +34,17 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="/assets/sass/main.css">
 
-  <script type="text/javascript">
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
-    analytics.load('Im5TEqG2121n8lVHvgwNAW9yQ42j69Nd');
-    analytics.page()
-    }}();
-  </script>
+	<!-- Google Analytics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-70777714-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
 
 	<!-- Facebook Pixel Code -->
 	<script>
@@ -78,7 +83,7 @@
 
   <div class="container">
     <nav class="header">
-	<a href="/en/" rel="nofollow" data-track="click" data-track-label="Nav logo click">
+	<a href="/en/" rel="nofollow" data-action="click" data-action-label="Nav logo click" category="Navigation">
 		<div class="header__logo">Just Arrived</div>
 	</a>
 
@@ -87,13 +92,13 @@
   
   
 
-  <a href="/newcomer/" data-track="click" data-track-label="Language switch (sv)">
+  <a href="/newcomer/" data-action="click" data-action-label="Language switch (sv)" category="Language">
     <span class="lang-sv inactive">Svenska</span>
   </a>
-  <a href="/en/newcomer/" data-track="click" data-track-label="Language switch (en)">
+  <a href="/en/newcomer/" data-action="click" data-action-label="Language switch (en)" category="Language">
     <span class="lang-en ">English</span>
   </a>
-  <a href="/ar/newcomer/" data-track="click" data-track-label="Language switch (ar)">
+  <a href="/ar/newcomer/" data-action="click" data-action-label="Language switch (ar)" category="Language">
     <span class="lang-ar inactive">العربية</span>
   </a>
   <div class="pulsate-element"></div>
@@ -106,27 +111,27 @@
 		</li>
 
 		<li>
-			<a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+			<a href="https://app.justarrived.se/#/user/signin" data-action="click" data-action-label="Nav to app login" category="Navigation">
 				<span>Login</span>
 			</a>
 		</li>
 		<li>
-			<a href="/en/about-us/" data-track="click" data-track-label="Nav to about us page">
+			<a href="/en/about-us/" data-action="click" data-action-label="Nav to about us page" category="Navigation">
 				<span>About us</span>
 			</a>
 		</li>
 		<li>
-			<a href="/en/blog/" data-track="click" data-track-label="Nav to blog page">
+			<a href="/en/blog/" data-action="click" data-action-label="Nav to blog page" category="Navigation">
 				<span>Blog</span>
 			</a>
 		</li>
 		<li class="show-on-tablet">
-			<a href="/en/company/" data-track="click" data-track-label="Nav to company page">
+			<a href="/en/company/" data-action="click" data-action-label="Nav to company page" category="Navigation">
 				<span>For Companies</span>
 			</a>
 		</li>
 		<li class="show-on-tablet">
-			<a href="/en/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+			<a href="/en/newcomer/" data-action="click" data-action-label="Nav to newcomers page" category="Navigation">
 				<span>For Newcomers</span>
 			</a>
 		</li>
@@ -137,27 +142,27 @@
 	<div class="hide" id="responsive-header">
     <ul>
 			<li>
-				<a href="/en/newcomer/" data-track="click" data-track-label="Nav to newcomers page">
+				<a href="/en/newcomer/" data-action="click" data-action-label="Nav to newcomers page" category="Navigation">
 					<span>For Newcomers</span>
 				</a>
 			</li>
 			<li>
-				<a href="/en/company/" data-track="click" data-track-label="Nav to company page">
+				<a href="/en/company/" data-action="click" data-action-label="Nav to company page" category="Navigation">
 					<span>For Companies</span>
 				</a>
 			</li>
 			<li>
-				<a href="/en/blog/" data-track="click" data-track-label="Nav to blog page">
+				<a href="/en/blog/" data-action="click" data-action-label="Nav to blog page" category="Navigation">
 					<span>Blog</span>
 				</a>
 			</li>
 			<li>
-				<a href="/en/about-us/" data-track="click" data-track-label="Nav to about us page">
+				<a href="/en/about-us/" data-action="click" data-action-label="Nav to about us page" category="Navigation">
 					<span>About us</span>
 				</a>
 			</li>
 			<li>
-				<a href="https://app.justarrived.se/#/user/signin" data-track="click" data-track-label="Nav to app login">
+				<a href="https://app.justarrived.se/#/user/signin" data-action="click" data-action-label="Nav to app login" category="Navigation">
 					<span>Login</span>
 				</a>
 			</li>
@@ -600,7 +605,7 @@
         <br>
         <h3>Already a member?</h3>
         <p>
-          <a href="https://app.justarrived.se/#/user/signin" class="border-btn btn-large border-btn--pink" data-track="click" data-track-label="Job card popup app login">
+          <a href="https://app.justarrived.se/#/user/signin" class="border-btn btn-large border-btn--pink" data-action="click" data-action-label="Job card popup app login" category="Registration">
             Login
           </a>
         </p>
