@@ -6,6 +6,7 @@
 
   /* Google Analytics Categories */
   var companyCategory = 'Company';
+  var xmasCategory = 'Christmas';
   var newcomerCategory = 'Newcomer';
   var ctaCategory = 'CTA';
 
@@ -84,6 +85,15 @@
     });
   }
 
+  function trackXmasRegPopupOpen() {
+    $('.cd-popup-trigger-xmas').on('click', function() {
+      gaTracking(
+        xmasCategory,
+        'click',
+        'Christmas popup open');
+    });
+  }
+
   function initTrackOfDOMElements() {
     $('[data-action]').each(function() {
       var $element = $(this);
@@ -120,6 +130,7 @@
       trackNewcomerSignupStart();
       trackNewcomerSignupDone();
       trackNewcomerRegPopupOpen();
+      trackXmasRegPopupOpen();
       trackCompanyRegPopupOpen();
       initTrackOfDOMElements();
       trackJobCardClick();

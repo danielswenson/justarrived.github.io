@@ -80,7 +80,7 @@
       gaTracking(
         companyCategory,
         'click',
-        'Registration popup open');
+        'Indicate interest popup open');
     });
   }
 

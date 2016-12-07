@@ -80,6 +80,17 @@
 
 
 <body data-lang="sv" class="sv-locale ltr-locale-direction" dir="ltr" itemscope="" itemtype="http://schema.org/WebPage">
+  <div class="container" id="xmas-banner">
+  <div class="cookie-message">
+    <div class="cookie-message-inner">
+      <p class="text">
+        
+        <br>
+        <a class="read-more xmas-campaign-click" href="/xmas/"></a>
+      </p>
+    </div>
+  </div>
+</div>
 
   <div class="container">
     <nav class="header">
@@ -194,7 +205,7 @@
       <div class="how-it-works">
         <h2 class="primary-color">Så här funkar det</h2>
         <p>
-          Just nu finns det X nyanlända som bara väntar på att få ett jobb. Vi har en lösning på problemet. Ju fler företag som registrerar sig hos oss, desto fler nyanlända får ett jobb. Enkelt va? Nu startar vi Decemberutmaningen där vi vill ha er hjälp med att uppmana företag att signa upp sig så att fler får jobb.
+          Just nu finns det tusentals nyanlända som bara väntar på att få ett jobb. Vi har en lösning på problemet. Ju fler företag som registrerar sig hos oss, desto fler nyanlända får ett jobb. Enkelt va? Nu startar vi Decemberutmaningen där vi vill ha er hjälp med att uppmana företag att signa upp sig så att fler får jobb.
         </p>
       </div>
     </section>
@@ -214,7 +225,7 @@
       </div>
     </section>
     <section class="supporters">
-      <h2 class="secondary-color">Latest supporters</h2>
+      <h2 class="secondary-color">Senaste supporters</h2>
       <ul>
         <li><span class="primary-color supporter-name">Var den första att registrera!</span></li>
       </ul>
@@ -230,7 +241,7 @@
       <div class="wrap">
         <div class="module-content">
           <h2>Vad väntar du på?</h2>
-          <button class="register-button" id="button">
+          <button class="cd-popup-trigger-xmas register-button" id="button">
             Registrera nu
           </button>
         </div>
@@ -244,10 +255,58 @@
         <img class="counter-diamond-image" src="/assets/images/xmas/counter_blue.png" alt="counter" />
         <span class="counter-number">0</span>
       </div>
-      <p style="font-size:18px;"><span class="primary-color">0</span>/150 registrations</p>
+      <p style="font-size:18px;"><span class="primary-color">0</span>/150 registrerade</p>
     </section>
   </div>
 </div>
+
+  <div class="cd-popup cd-popup-xmas">
+    <div class="cd-popup-container">
+      <section class="section--signup-popup">
+        <div class="
+      module-content
+      module-content--centered
+      module--black
+      ">
+          <h2 class="bordered bordered--primary bordered--centered module--txt-c">Intresseanmälan</h2>
+          <div id="mc_embed_signup">
+            <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+              <input type=hidden name="oid" value="00D58000000cNvl">
+              <input type=hidden name="retURL" value="http://">
+
+              <label for="first_name">Förnamn</label>
+              <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+              <label for="last_name">Efternamn</label>
+              <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+              <label for="email">Email</label>
+              <input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+              <label for="company">Företag</label>
+              <input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+              <label for="company">Titel/position</label>
+              <input  id="role" maxlength="40" name="role" size="20" type="text" /><br>
+
+              <label for="city">Stad</label>
+              <input id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+              <input type="hidden" id="lead_source" name="lead_source" value="Julkampanj" /><br>
+
+              <div class="clear company-submit-interest-button">
+                <input style="margin: 0 auto;" type="submit" name="submit" class="button border-btn btn-large border-btn--pink">
+              </div>
+            </form>
+          </div>
+        </div>
+        <a href="#0" class="cd-popup-close img-replace"></a>
+      </section>
+    </div>
+    <!-- cd-popup-container -->
+  </div>
+  <!-- cd-popup -->
+
 
 
     <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
