@@ -6,25 +6,9 @@
 
   /* Google Analytics Categories */
   var companyCategory = 'Company';
+  var xmasCategory = 'Christmas';
   var newcomerCategory = 'Newcomer';
   var ctaCategory = 'CTA';
-
-  /**
-  * Convenience function for tracking using Google Analytics
-  * Since we only post events this function can be used for all tracking at this point.
-  *
-  @ param category    The category to post the event under
-  @ param action      Action (type of click) that was performed
-  @ param label       The label you want to use to describe the event
-  */
-  function gaTracking(category, action, label) {
-    ga('send', {
-      hitType: 'event',
-      eventCategory: category,
-      eventAction: action,
-      eventLabel: label
-    });
-  }
 
   function findValueWithName(array, name) {
     var value;
@@ -40,7 +24,7 @@
 
   function trackNewcomerSignupDone() {
     if ($('.js-newcomer-register-submit-thanks').length > 0) {
-      gaTracking(newcomerCategory,
+      gaTrack(newcomerCategory,
                 'click',
                 'Wintrgarden - Finished signup');
     }
@@ -49,7 +33,7 @@
   function trackNewcomerSignupStart() {
     var trackNewcomer = function(selector, eventLabel) {
       $(document).on('click', selector, function() {
-        gaTracking(newcomerCategory,
+        gaTrack(newcomerCategory,
                    'started',
                    eventLabel);
       });
@@ -62,13 +46,13 @@
 
   function trackCompanySignup() {
     $('.js-company-signup-form').submit(function() {
-      gaTracking(companyCategory, 'submit', 'Company has submitted interest for JA');
+      gaTrack(companyCategory, 'submit', 'Company has submitted interest for JA');
     });
   }
 
   function trackNewcomerRegPopupOpen() {
     $('.cd-popup-trigger-newcomer-signup').on('click', function() {
-      gaTracking(
+      gaTrack(
         newcomerCategory,
         'click',
         'Registration popup open');
@@ -77,10 +61,19 @@
 
   function trackCompanyRegPopupOpen() {
     $('.cd-popup-trigger-signin').on('click', function() {
-      gaTracking(
+      gaTrack(
         companyCategory,
         'click',
         'Indicate interest popup open');
+    });
+  }
+
+  function trackXmasRegPopupOpen() {
+    $('.cd-popup-trigger-xmas').on('click', function() {
+      gaTrack(
+        xmasCategory,
+        'click',
+        'Christmas popup open');
     });
   }
 
@@ -96,7 +89,7 @@
       } else if (label) {
         // Add event listener to element
         $element.on(action, function() {
-          gaTracking(
+          gaTrack(
             category,
             action,
             label
@@ -110,7 +103,7 @@
 
   function trackJobCardClick() {
     $(document).on('click', '.job-card', function() {
-      gaTracking(ctaCategory, 'click', 'Job card on startpage clicked');
+      gaTrack(ctaCategory, 'click', 'Job card on startpage clicked');
     });
   }
 
@@ -120,6 +113,7 @@
       trackNewcomerSignupStart();
       trackNewcomerSignupDone();
       trackNewcomerRegPopupOpen();
+      trackXmasRegPopupOpen();
       trackCompanyRegPopupOpen();
       initTrackOfDOMElements();
       trackJobCardClick();

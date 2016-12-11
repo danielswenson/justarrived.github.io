@@ -14,6 +14,17 @@
 	</script>
 
 	<title>Just Arrived</title>
+
+  <meta property="og:site_name" content="Just Arrived" />
+  <meta property="og:type" content="website" />
+  
+  
+  <meta property="og:locale" content="ar" />
+
+  <meta property="og:locale:alternate" content="sv" />
+  <meta property="og:locale:alternate" content="en" />
+  
+
 	<meta name="description" content="">
 	
 	<link rel="canonical" href="http://justarrived.se/newcomer/">
@@ -75,25 +86,45 @@
   </script>
   <!-- END Hotjar Tracking Code for http://justarrived.se -->
 
+  <script type="text/javascript">
+    /**
+    * Convenience function for tracking using Google Analytics
+    * Since we only post events this function can be used for all tracking at this point.
+    *
+    @ param category    The category to post the event under
+    @ param action      Action (type of click) that was performed
+    @ param label       The label you want to use to describe the event
+    */
+    function gaTrack(category, action, label) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: category,
+        eventAction: action,
+        eventLabel: label
+      });
+    }
+  </script>
+
 </head>
 
 
 
 <body data-lang="ar" class="ar-locale rtl-locale-direction" dir="rtl" itemscope="" itemtype="http://schema.org/WebPage">
-  <div class="container" id="xmas-banner">
-  <div class="cookie-message">
+  <div class="container">
+    <div class="container" id="xmas-banner">
+  <div class="cookie-message" style="padding: 5px 20px;width:100%;background: #fff;color: #101010;">
     <div class="cookie-message-inner">
-      <p class="text">
-        
-        <br>
-        <a class="read-more xmas-campaign-click" href="/ar/xmas/"></a>
+      <p class="text" style="font-size: 12px;">
+        Under december så har vi en julkampanj där vi utmanar dig att verkligen göra en skillnad.
+        <a class="read-more xmas-campaign-click" href="/ar/decemberutmaningen/">
+          Ta mig till kampanjen!
+        </a>
       </p>
     </div>
   </div>
 </div>
 
-  <div class="container">
-    <nav class="header">
+<nav class="header">
 	<a href="/ar/" rel="nofollow" data-action="click" data-action-label="Nav logo click" category="Navigation">
 		<div class="header__logo">Just Arrived</div>
 	</a>
@@ -353,7 +384,7 @@
     ">
       <h2 class="bordered bordered--primary bordered--centered">تريد معرفة المزيد؟</h2>
       <p>
-        <a href="/ar/faq/#newcomer" class="border-btn btn-large border-btn--pink">
+        <a href="/ar/faq/newcomer/" class="border-btn btn-large border-btn--pink">
           الأسئلة الشائعة للوافدين الجدد
         </a>
       </p>
@@ -372,7 +403,7 @@
     <div class="module-content">
       <h2 class="bordered bordered--secondary bordered--centered">هل ما زال لديك أسئلة؟</h2>
       <h4>
-        <a href="/faq/#newcomer">بسسست... انظر الى صفحة الأسئلة الشائعة</a>
+        <a href="/faq/newcomer">بسسست... انظر الى صفحة الأسئلة الشائعة</a>
       </h4>
 
       <div class="columns columns--inline">
@@ -686,6 +717,71 @@
 <script charset="utf-8" src="/assets/js/site.js" ></script>
 <script type="text/javascript">
   Site.init(); // Init site JavaScript
+</script>
+
+<script type="text/javascript">
+  PollerConfig = { url: 'https://throwawaypoll.herokuapp.com' };
+</script>
+<script charset="utf-8" src="/assets/js/xmas/poller.js" ></script>
+<script type="text/javascript">
+  ALLREADY_SUBMITTED_XMAS_COUNT = 15;
+  GA_XMAS_CATEGORY = 'Christmas';
+
+  function getXmasPoller() {
+    var opts = {
+      id: 'live1-xmas-campaign',
+      points: true
+    };
+    return new Poller(opts);
+  }
+
+  function updateXmasSupporters() {
+    getXmasPoller().result(function(result) {
+      var submitCount = result.length;
+      var counterElements = document.querySelectorAll('.js-current-count');
+      for (var i = 0; i < counterElements.length; i++) {
+        counterElements[i].innerText = ALLREADY_SUBMITTED_XMAS_COUNT + submitCount;
+      }
+
+      var supporterList = [];
+      for (var i = result.length - 1; i >= 0; i--) {
+        var name = result[i][0];
+        supporterList.push('<li><span class="primary-color supporter-name">' + name + '</span></li>')
+      }
+      $('.js-supporter-list').prepend(supporterList.join(''));
+
+      var calculateFillHeight = function(count) {
+        var percentFilled = (count / 150) * 100;
+        var fillHeight = (percentFilled * 2.65) + 24;
+        if (fillHeight > 285) {
+          fillHeight = 285;
+        }
+        return fillHeight;
+      }
+      $('.counter-bg-overlay').css('height', calculateFillHeight(submitCount) + 'px');
+    });
+  }
+
+  function submitXmas() {
+    var firstName = document.getElementById('first_name').value;
+    var lastName = document.getElementById('last_name').value;
+    var company = document.getElementById('company').value;
+    var role = document.getElementById('role').value;
+
+    var fullName = firstName + ' ' + lastName + ', ' + role + ', ' + company;
+
+    getXmasPoller().submit({x: fullName, y: 1}, function() {
+      gaTrack(GA_XMAS_CATEGORY, 'submit', 'submit supporter form (fixed)');
+
+      updateXmasSupporters();
+    });
+
+    // Let the form be submitted
+    return true;
+  }
+
+  // MAIN
+  updateXmasSupporters();
 </script>
 
 <script type="text/javascript">
