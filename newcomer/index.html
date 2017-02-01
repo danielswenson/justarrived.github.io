@@ -65,11 +65,11 @@
 	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 	document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-	fbq('init', '1166436026729850');
+	fbq('init', '353518471700713');
 	fbq('track', "PageView");
-	fbq('track', 'CompleteRegistration');</script>
+	</script>
 	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=1166436026729850&ev=PageView&noscript=1"
+	src="https://www.facebook.com/tr?id=353518471700713&ev=PageView&noscript=1"
 	/></noscript>
 	<!-- End Facebook Pixel Code -->
 
@@ -110,21 +110,18 @@
 
 
 <body data-lang="sv" class="sv-locale ltr-locale-direction" dir="ltr" itemscope="" itemtype="http://schema.org/WebPage">
-  <div class="container">
-    <div class="container" id="xmas-banner">
-  <div class="cookie-message" style="padding: 5px 20px;width:100%;background: #fff;color: #101010;">
-    <div class="cookie-message-inner">
-      <p class="text" style="font-size: 12px;">
-        Under december så har vi en julkampanj där vi utmanar dig att verkligen göra en skillnad.
-        <a class="read-more xmas-campaign-click" href="/decemberutmaningen/">
-          Ta mig till kampanjen!
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-<nav class="header">
+  <div class="container">
+    <nav class="header">
 	<a href="/" rel="nofollow" data-action="click" data-action-label="Nav logo click" category="Navigation">
 		<div class="header__logo">Just Arrived</div>
 	</a>
@@ -253,7 +250,7 @@
           </div>
           <div class="card-body second-col">
             <h3 class="card-title">1. Registrera din ansökan</h3>
-            <p class="card-content"><a href="#" class="cd-popup-trigger-newcomer-signup">Ansök</a> eller genom att klicka på knappen "Ansök". Registreringsformuläret tar några minuter och är öppet för alla nyanlända och asylsökande. Du kommer också få nyheter och uppdateringar från Just Arrived efter registrering. Var vänlig notera att detta är en ansökan, och ger dig inte autimatiskt tillgång till Just Arrived's tjänst.</p>
+            <p class="card-content"><a href="#" class="cd-popup-trigger-newcomer-signup">Ansök</a> eller genom att klicka på knappen "Ansök". Registreringsformuläret tar några minuter och är öppet för alla nyanlända och asylsökande. Du kommer också få nyheter och uppdateringar från Just Arrived efter registrering. Var vänlig notera att detta är en ansökan, och ger dig inte automatiskt tillgång till Just Arrived's tjänst.</p>
           </div>
         </div>
       </div>
@@ -498,7 +495,7 @@
   <div class="copy-footer module--dark-gray-bg">
     <div id="inner-footer">
       <p class="source-org copyright">
-        <span>&copy; 2016 Just Arrived</span>
+        <span>&copy; 2017 Just Arrived</span>
       </p>
     </div>
   </div>
@@ -551,7 +548,7 @@
                 <input type="text" value="" maxlength="80" name="last_name" class="required" id="mce-LASTNAME" required>
               </div>
               <div class="form-col mc-field-group size1of2">
-                <label for="mce-PHONE">Telefon nummer <span class="asterisk">*</span></label>
+                <label for="mce-PHONE">Telefonnummer <span class="asterisk">*</span></label>
                 <input type="number" maxlength="40" name="phone" class="" value="" id="mce-PHONE" required>
               </div>
               <div class="form-col mc-field-group">
@@ -721,62 +718,14 @@
 </script>
 
 <script type="text/javascript">
-  PollerConfig = { url: 'https://throwawaypoll.herokuapp.com' };
-</script>
-<script charset="utf-8" src="/assets/js/xmas/poller.js" ></script>
-<script type="text/javascript">
-  ALLREADY_SUBMITTED_XMAS_COUNT = 110;
-  GA_XMAS_CATEGORY = 'Christmas';
-
-  function getXmasPoller() {
-    var opts = {
-      id: 'live5-xmas-campaign',
-      points: true
-    };
-    return new Poller(opts);
-  }
-
-  function updateXmasSupporters() {
-    getXmasPoller().result(function(result) {
-      var submitCount = result.length;
-      var totalCount = ALLREADY_SUBMITTED_XMAS_COUNT + submitCount;
-
-      var supporterList = [];
-      for (var i = result.length - 1; i >= 0; i--) {
-        var name = result[i][0];
-        supporterList.push('<li><span class="primary-color supporter-name">' + name + '</span></li>')
-      }
-      $('.js-supporter-list').prepend(supporterList.join(''));
-
-      new ProgressWidget({
-        selector: '#xmas-signups',
-        current: totalCount,
-        target: 150,
-        text: 'registrerade'
-      });
+  if (location.pathname.indexOf('/decemberutmaningen') !== -1) {
+    new ProgressWidget({
+      selector: '#xmas-signups',
+      current: 133,
+      target: 150,
+      text: 'registrerade'
     });
   }
-
-  function submitXmas() {
-    var firstName = document.getElementById('first_name').value;
-    var lastName = document.getElementById('last_name').value;
-    var company = document.getElementById('company').value;
-    var role = document.getElementById('role').value;
-
-    var fullName = firstName + ' ' + lastName + ', ' + role + ', ' + company;
-
-    getXmasPoller().submit({x: fullName, y: 1}, function() {
-      gaTrack(GA_XMAS_CATEGORY, 'submit', 'submit supporter form (fixed)');
-
-      updateXmasSupporters();
-    });
-
-    // Let the form be submitted
-    return true;
-  }
-
-  // MAIN
-  updateXmasSupporters();
 </script>
 
 <script type="text/javascript">
