@@ -243,56 +243,49 @@
 
     <div class="columns simple-card-container">
 
-      <div class="column-1-4 equal-height">
+      <div class="column-1-3 equal-height">
         <div class="simple-card flex-grid-twos">
           <div class="large-icon first-col">
             <img src="/assets/images/icons/how-to-register.png" alt="">
           </div>
           <div class="card-body second-col">
-            <h3 class="card-title">1. Registrera din ansökan</h3>
-            <p class="card-content"><a href="#" class="cd-popup-trigger-newcomer-signup">Ansök</a> eller genom att klicka på knappen "Ansök". Registreringsformuläret tar några minuter och är öppet för alla nyanlända och asylsökande. Du kommer också få nyheter och uppdateringar från Just Arrived efter registrering. Var vänlig notera att detta är en ansökan, och ger dig inte automatiskt tillgång till Just Arrived's tjänst.</p>
+            <h3 class="card-title">1. Kom igång</h3>
+            <p><a href="{{ site.app_register_link }}">Skapa ditt konto</a> på Just Arrived. Registreringen tar en minut att göra färdigt och kan göras av alla nyanlända och asylsökande. Efter registreringen kommer du också få nyheter och uppdateringar från Just Arrived.</p>
           </div>
         </div>
       </div>
-      <div class="column-1-4 equal-height">
+      <div class="column-1-3 equal-height">
         <div class="simple-card flex-grid-twos">
           <div class="large-icon first-col">
             <img src="/assets/images/icons/how-to-requirements.png" alt="">
           </div>
           <div class="card-body second-col">
-            <h3 class="card-title">2. Förbered dina handlingar</h3>
-            <p class="card-content">Efter att du har registrerat dig behöver du se till att du har alla relevanta handlingar för att kunna söka jobb via Just Arrived. Om du behöver uppdatera din ansökan gör du det enklast genom att maila till support@justarrived.se.</p>
+            <h3 class="card-title">2. Profil</h3>
+            <p>Detta är det allra viktigaste för att öka dina chanser att få ett jobb via Just Arrived!</p><p>Se till att du fyller i all relevant information och alla dina olika kompetenser. Om din profil är tom så kommer du inte matchas med några jobb.</p>
           </div>
         </div>
       </div>
-      <div class="column-1-4 equal-height">
+      <div class="column-1-3 equal-height">
         <div class="simple-card flex-grid-twos">
           <div class="large-icon first-col">
             <img src="/assets/images/icons/how-to-interview.png" alt="">
           </div>
           <div class="card-body second-col">
-            <h3 class="card-title">3. Gå på intervju</h3>
-            <p class="card-content">När du uppnått förutsättningarna för att söka jobb är nästa steg att bli kallad till en intervju. När och hur du blir kontaktad beror på vilken stad du bor i samt hur många och vilka typer av jobb som är tillgängliga i ditt område.</p>
+            <h3 class="card-title">3. Sök jobb</h3>
+            <p>Nu är det dags att börja söka jobb!</p><p>Sök till varje, och alla jobb du vill ha. Glöm inte att logga in ofta för att se om vi har lagt upp några nya jobb!</p>
           </div>
         </div>
       </div>
-      <div class="column-1-4 equal-height">
-        <div class="simple-card flex-grid-twos">
-          <div class="large-icon first-col">
-            <img src="/assets/images/icons/how-to-access.png" alt="">
-          </div>
-          <div class="card-body second-col">
-            <h3 class="card-title">4. Tillgång till tjänsten</h3>
-            <p class="card-content">Om du går vidare från intervjun får du därefter tillgång till tjänsten. Du kan då logga in här på sidan, skapa en profil och söka alla våra tillgängliga jobb.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
 
     <br><br>
     <p class="module--txt-strong-c">
-      <a href="#" class="cd-popup-trigger-newcomer-signup primary-btn btn-large btn-wide module--txt-strong-c">Ansök</a>
+      <a style="margin-top: 10px;" href="https://app.justarrived.se/user/register" class="border-btn btn-large border-btn--pink btn-wide module--txt-strong-c" data-category="CTA" data-action="Register in app click">
+        Skapa ett konto
+      </a>
+      <a style="margin-top: 10px;" href="https://app.justarrived.se/jobs/" class="primary-btn btn-large btn-wide module--txt-strong-c js-goto-app-jobs">
+        Kolla in våra jobb
+      </a>
     </p>
 
   </div>
@@ -609,60 +602,6 @@
 </div>
 <!-- cd-popup -->
 
-<div class="cd-popup cd-popup-promo">
-  <div class="cd-popup-container">
-    <section class="section--signup-popup">
-      <div class="
-    module-content
-    module-content--centered
-    module--txt-c
-    module--black
-    ">
-        <h2 class="bordered bordered--secondary bordered--centered">Skriv in din promokod</h2>
-        <p class="module--txt-l">Om du har fått en promokod, var vänlig skriv den här</p>
-        <form class="promo-form" onsubmit="return submitPromoCode()">
-          <div class="form-col form-col--full-width">
-            <input type="password" placeholder="Promokod" id="promo-code-input" value="" />
-          </div>
-          <div class="form-response" id="promo-error"></div>
-          <div class="form-response" id="promo-success"></div>
-          <div class="form-col form-col--submit-btn">
-            <input type="submit" value="Ta mig till tjänsten" class="border-btn btn-large border-btn--blue">
-          </div>
-        </form>
-      </div>
-      <a href="#0" class="cd-popup-close img-replace"></a>
-    </section>
-  </div>
-  <!-- cd-popup-container -->
-</div>
-<!-- cd-popup -->
-
-<div class="cd-popup cd-popup-newcomer-signup">
-  <div class="cd-popup-container">
-    <section class="section--signup-popup">
-      <div class="
-        module-content
-        module-content--centered
-        module--txt-c
-        module--black
-        ">
-        <h2 class="bordered bordered--secondary bordered--centered">Ansök till Just Arrived</h2>
-        <p class="module--txt-l">Registreringen kommer ta några minter. Syfter är att ge oss all den information vi behöver för att bäst kunna hjälpa dig in i den svenska arbetsmarknaden. Var god fyll i all information så gott du kan. Börja med att välja ett av följande alternativ:</p>
-        <br>
-        <p>
-          <a href="https://wgtrm.com/dc/#justarrived.jaas1" class="js-wintrgarden-signup-no-reg primary-btn btn-large">Jag är asylsökande</a>
-          <br>
-          <a href="https://wgtrm.com/dc/#justarrived.jar2" style="font-size:14px;" class="js-wintrgarden-signup-reg primary-btn primary-btn btn-large">Jag har uppehållstillstånd</a>
-        </p>
-      </div>
-      <a href="#0" class="cd-popup-close img-replace"></a>
-    </section>
-  </div>
-  <!-- cd-popup-container -->
-</div>
-<!-- cd-popup -->
-
 <div class="cd-popup cd-popup-job-card-popup">
   <div class="cd-popup-container">
     <section class="section--signup-popup">
@@ -717,7 +656,6 @@
 <script charset="utf-8" src="/assets/js/scripts.js" ></script>
 <script charset="utf-8" src="/assets/js/pay-calculator.js" ></script>
 <script charset="utf-8" src="/assets/js/hourly-pays-input-list.js" ></script>
-<script charset="utf-8" src="/assets/js/promo-code.js" ></script>
 <script charset="utf-8" src="/assets/js/ja-jobs.js" ></script>
 <script charset="utf-8" src="/assets/js/cookie-notice.js" ></script>
 <script charset="utf-8" src="/assets/js/just-track.js" ></script>
